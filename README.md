@@ -12,7 +12,9 @@ This package *does not* implements all public features of the oidc-client librar
 
 # Sample usage
 
-The following snippet shows how to setup the client to send and receive messages using SignalR.
+The following snippet shows how to setup the oidc client and allow authentication.
+
+On the page where we want to begin the authentication process
 
 ```c#
 var config = new IdentityConfiguration
@@ -36,6 +38,13 @@ else
 {
     // do anything
 }
+```
+
+And on the callback page
+
+```c#
+var manager = new UserManager(config);
+await manager.SignInRedirectCallback();
 ```
 
 # Contributions and feedback
