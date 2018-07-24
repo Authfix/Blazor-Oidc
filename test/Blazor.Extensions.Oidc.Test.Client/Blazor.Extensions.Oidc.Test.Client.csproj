@@ -12,8 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Blazor.Extensions.Oidc.JS\Blazor.Extensions.Oidc.JS.csproj" />
     <ProjectReference Include="..\..\src\Blazor.Extensions.Oidc\Blazor.Extensions.Oidc.csproj" />
     <ProjectReference Include="..\Blazor.Extensions.Oidc.Test.Shared\Blazor.Extensions.Oidc.Test.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Callback.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

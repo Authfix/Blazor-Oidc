@@ -1,13 +1,9 @@
 ﻿@using Accolades.Blazor.Extensions.Oidc;
-@page "/"
+@page "/callback"
 
-<h1>Hello, world!</h1>
+<h1>Counter</h1>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
-
-@functions{
+@functions {
 
     protected async override Task OnInitAsync()
     {
@@ -24,19 +20,6 @@ Welcome to your new app.
         };
 
         var manager = new UserManager(config);
-        var user = await manager.GetUser();
-
-        if(user == null)
-        {
-            Console.WriteLine("User not connected");
-            await manager.SignIn();
-
-        }
-        else
-        {
-            Console.WriteLine(user);
-
-        }
+        await manager.SignInRedirectCallback();
     }
-
 }
