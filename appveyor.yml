@@ -9,7 +9,7 @@ before_build:
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
 build_script:
-  - ps: /p:AssemblyVersion=%GitVersion_AssemblySemVer% /p:ProductVersion=%GitVersion_InformationalVersion%  /p:FileVersion=%GitVersion_MajorMinorPatch%  /property:Configuration=Release --no-restore
+  - ps: dotnet build /p:AssemblyVersion=%GitVersion_AssemblySemVer% /p:ProductVersion=%GitVersion_InformationalVersion%  /p:FileVersion=%GitVersion_MajorMinorPatch%  /property:Configuration=Release --no-restore
 
 after_build:
   - cmd: nuget pack .nuget/Authfix.Blazor.Extensions.Oidc.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
