@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Accolades.Blazor.Extensions.Oidc.JS</AssemblyName>
+    <RootNamespace>Accolades.Blazor.Extensions.Oidc.JS</RootNamespace>
+  </PropertyGroup>
+
+</Project>
