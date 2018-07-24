@@ -1,0 +1,23 @@
+install:
+  - choco install gitversion.portable -pre -y
+
+assembly_info:
+  patch: false
+
+before_build:
+  - dotnet restore
+  - ps: gitversion /l console /output buildserver /updateAssemblyInfo
+
+build_script:
+  - ps: /p:AssemblyVersion=%GitVersion_AssemblySemVer% /p:ProductVersion=%GitVersion_InformationalVersion%  /p:FileVersion=%GitVersion_MajorMinorPatch%  /property:Configuration=Release --no-restore
+
+after_build:
+  - cmd: nuget pack .nuget/Authfix.Blazor.Extensions.Oidc.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+
+artifacts:
+  - path: '*.nupkg'
+    name: Authfix.Blazor.Extensions.Oidc
+
+branches:
+  only:
+    - master
