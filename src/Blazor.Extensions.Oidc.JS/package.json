@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "name": "accolades.blazor.extensions.oidc",
+  "name": "authfix.blazor.extensions.oidc",
   "private": true,
   "scripts": {
     "build": "webpack",

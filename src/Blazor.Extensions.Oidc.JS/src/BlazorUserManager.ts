@@ -7,7 +7,7 @@ export class BlazorUserManager {
     public static initialize() {
         const Blazor: BlazorType = window["Blazor"];
 
-        Blazor.registerFunction('Accolades.Blazor.Extensions.Oidc.Init', (configuration: any) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.Init', (configuration: any) => {
 
             var localConfiguration: UserManagerSettings =
             {
@@ -22,15 +22,15 @@ export class BlazorUserManager {
             window["BlazorExtensions"].UserManager = new Oidc.UserManager(localConfiguration);
         });
 
-        Blazor.registerFunction('Accolades.Blazor.Extensions.Oidc.GetUser', () => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.GetUser', () => {
             return window["BlazorExtensions"].UserManager.getUser();
         });
 
-        Blazor.registerFunction('Accolades.Blazor.Extensions.Oidc.SignIn', () => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignIn', () => {
             return window["BlazorExtensions"].UserManager.signinRedirect();
         });
 
-        Blazor.registerFunction('Accolades.Blazor.Extensions.Oidc.SignInRedirectCallback', () => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInRedirectCallback', () => {
             return window["BlazorExtensions"].UserManager.signinRedirectCallback();
         });
     }

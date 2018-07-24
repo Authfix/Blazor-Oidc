@@ -12,8 +12,8 @@
     
     <!-- VS's FastUpToDateCheck doesn't consider .ts file changes, so it's necessary to disable it to get incremental builds to work correctly (albeit not as fast as if FastUpToDateCheck did work for them) -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-    <AssemblyName>Accolades.Blazor.Extensions.Oidc.JS</AssemblyName>
-    <RootNamespace>Accolades.Blazor.Extensions.Oidc.JS</RootNamespace>
+    <AssemblyName>Authfix.Blazor.Extensions.Oidc.JS</AssemblyName>
+    <RootNamespace>Authfix.Blazor.Extensions.Oidc.JS</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,7 +31,7 @@
     <Exec Command="npm install" />
   </Target>
 
-  <Target Name="RunWebpack" AfterTargets="ResolveReferences" Inputs="@(WebpackInputs)" Outputs="dist\accolades.blazor.extensions.oidc.js" DependsOnTargets="EnsureNpmRestored">
+  <Target Name="RunWebpack" AfterTargets="ResolveReferences" Inputs="@(WebpackInputs)" Outputs="dist\authfix.blazor.extensions.oidc.js" DependsOnTargets="EnsureNpmRestored">
     <RemoveDir Directories="dist" />
     <Exec Command="npm run build" />
     <ItemGroup>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Accolades.Blazor.Extensions.Oidc
+﻿namespace Authfix.Blazor.Extensions.Oidc
 {
     public class IdentityUser
     {

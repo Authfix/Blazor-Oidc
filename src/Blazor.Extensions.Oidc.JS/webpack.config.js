@@ -15,7 +15,7 @@ module.exports = {
         ]
     },
     entry: {
-        "accolades.blazor.extensions.oidc": "./src/Initialize.ts"
+        "authfix.blazor.extensions.oidc": "./src/Initialize.ts"
     },
     output: {
         path: path.join(__dirname, "/dist"),

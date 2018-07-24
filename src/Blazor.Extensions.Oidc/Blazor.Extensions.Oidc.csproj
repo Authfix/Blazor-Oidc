@@ -4,8 +4,8 @@
     <Title>Blazor Extensions Oidc</Title>
     <Description>Oidc client library implementation for ASP.NET Core Blazor.</Description>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Accolades.Blazor.Extensions.Oidc</AssemblyName>
-    <RootNamespace>Accolades.Blazor.Extensions.Oidc</RootNamespace>
+    <AssemblyName>Authfix.Blazor.Extensions.Oidc</AssemblyName>
+    <RootNamespace>Authfix.Blazor.Extensions.Oidc</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -27,7 +27,7 @@
 
   <Target Name="IncludeP2POutput">
     <ItemGroup>
-      <BuildOutputInPackage Include="$(OutputPath)Accolades.Blazor.Extensions.Oidc.JS.dll" />
+      <BuildOutputInPackage Include="$(OutputPath)Authfix.Blazor.Extensions.Oidc.JS.dll" />
     </ItemGroup>
   </Target>
 
