@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Authfix.Blazor.Extensions.Oidc</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Authfix</authors>
+    <owners></owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/Authfix/Blazor-Oidc/blob/develop/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Authfix/Blazor-Oidc</projectUrl>
+    <description>The package aims to add the possibility to use oidc-client javascript library inside a Blazor project by using Blazor's interop capabilities.</description>
+    <summary>Add oidc-client library support for Blazor</summary>
+  </metadata>
+  <files>
+    <file src="..\src\Blazor.Extensions.Oidc\bin\Release\netstandard2.0\Authfix.Blazor.Extensions.Oidc.dll" target="lib\netstandard2.0\Authfix.Blazor.Extensions.Oidc.dll" />
+    <file src="..\src\Blazor.Extensions.Oidc\bin\Release\netstandard2.0\Authfix.Blazor.Extensions.Oidc.JS.dll" target="lib\netstandard2.0\Authfix.Blazor.Extensions.Oidc.JS.dll" />
+  </files>
+</package>
