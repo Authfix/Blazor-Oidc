@@ -9,7 +9,8 @@ before_build:
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
 build_script:
-  - ps: dotnet build --configuration release --no-restore
+  - ps: dotnet build src/Blazor.Extensions.Oidc.JS/Blazor.Extensions.Oidc.JS.csproj --configuration release --no-restore
+  - ps: dotnet build src/Blazor.Extensions.Oidc/Blazor.Extensions.Oidc.csproj --configuration release --no-restore
 
 after_build:
   - cmd: nuget pack .nuget/Authfix.Blazor.Extensions.Oidc.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
