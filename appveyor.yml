@@ -22,4 +22,4 @@ artifacts:
 branches:
   only:
     - master
-    - /release/.*
+    - /release/.*/
