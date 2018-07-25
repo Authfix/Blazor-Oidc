@@ -42,46 +42,47 @@ export class BlazorUserManager {
             return window["BlazorExtensions"].UserManager.signinPopup(args);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SigninPopupCallback', (url?: string) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInPopupCallback', (url?: string) => {
             return window["BlazorExtensions"].UserManager.signinPopupCallback(url);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SigninSilent', (args?: any) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInSilent', (args?: any) => {
             return window["BlazorExtensions"].UserManager.signinSilent(args);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SigninSilentCallback', (url?: string) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInSilentCallback', (url?: string) => {
             return window["BlazorExtensions"].UserManager.signinSilentCallback(url);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SigninRedirect', (args?: any) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInRedirect', (args?: any) => {
             return window["BlazorExtensions"].UserManager.signinRedirect(args);
         });
 
         Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignInRedirectCallback', (url?: string) => {
+            console.log("Url : " + url);
             return window["BlazorExtensions"].UserManager.signinRedirectCallback(url);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignoutPopup', (args?: any) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignOutPopup', (args?: any) => {
             return window["BlazorExtensions"].UserManager.signoutPopup(args);
         });
 
-        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignoutPopupCallback', (url?: string, keepOpen?: boolean) => {
+        Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.SignOutPopupCallback', (url?: string, keepOpen?: boolean) => {
             return window["BlazorExtensions"].UserManager.signoutPopupCallback(url, keepOpen);
         });
-                
+
         Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.QuerySessionStatus', (args?: any) => {
             return window["BlazorExtensions"].UserManager.querySessionStatus(args);
         });
-        
+
         Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.RevokeAccessToken', () => {
             return window["BlazorExtensions"].UserManager.revokeAccessToken();
         });
-        
+
         Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.StartSilentRenew', () => {
             return window["BlazorExtensions"].UserManager.startSilentRenew();
         });
-        
+
         Blazor.registerFunction('Authfix.Blazor.Extensions.Oidc.StopSilentRenew', () => {
             return window["BlazorExtensions"].UserManager.stopSilentRenew();
         });

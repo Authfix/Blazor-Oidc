@@ -5,7 +5,8 @@
 
 @functions {
 
-    protected async override Task OnInitAsync()
+
+    protected async override Task OnAfterRenderAsync()
     {
         Console.WriteLine("Initiaze UserManager");
 
@@ -20,6 +21,6 @@
         };
 
         var manager = new UserManager(config);
-        await manager.SignInRedirectCallback();
+        var user = await manager.SignInRedirectCallback();
     }
 }
