@@ -6,6 +6,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Authfix.Blazor.Extensions.Oidc</AssemblyName>
     <RootNamespace>Authfix.Blazor.Extensions.Oidc</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <PropertyGroup>
