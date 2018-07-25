@@ -15,9 +15,9 @@ namespace Authfix.Blazor.Extensions.Oidc
             return RegisteredFunction.InvokeAsync<IdentityUser>("Authfix.Blazor.Extensions.Oidc.GetUser");
         }
 
-        public Task SignIn()
+        public Task SignInRedirect()
         {
-            return RegisteredFunction.InvokeAsync<object>("Authfix.Blazor.Extensions.Oidc.SignIn");
+            return RegisteredFunction.InvokeAsync<object>("Authfix.Blazor.Extensions.Oidc.SigninRedirect");
         }
 
         public Task SignInRedirectCallback()
