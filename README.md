@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/km14r54xibbhok8a?svg=true)](https://ci.appveyor.com/project/Authfix/blazor-oidc)
+[![Package Version](https://img.shields.io/nuget/v/Authfix.Blazor.Extensions.Oidc.svg)](https://www.nuget.org/packages/Authfix.Blazor.Extensions.Oidc)
+
 # Oidc Blazor Extensions Oidc
 
 This package adds a [Oidc-client](https://github.com/IdentityModel/oidc-client-js) library for [Microsoft ASP.NET Blazor](https://github.com/aspnet/Blazor).
