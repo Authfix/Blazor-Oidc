@@ -15,6 +15,12 @@ build_script:
 after_build:
   - cmd: nuget pack .nuget/Authfix.Blazor.Extensions.Oidc.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
 
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: nPs93YvdRXCuaBsDjnb7UPoOPRnpsZ4tJIsrKKVg5jkJaljcdQXAaK6tsGb5TnDb
+    skip_symbols: true
+
 artifacts:
   - path: '*.nupkg'
     name: Authfix.Blazor.Extensions.Oidc
